@@ -1,0 +1,6 @@
+@HighscoreAPI_HostAddress = http://localhost:5193
+
+GET {{HighscoreAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

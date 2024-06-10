@@ -1,0 +1,144 @@
+
+
+.main-content {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
+}
+
+
+
+/* Header */
+
+.main-content__header {
+    padding: 2em;
+    }
+
+:root {
+    --shadow-color: #fa5f4a;
+    --shadow-color-light: white;
+  }
+
+body {
+    font-family: "Archivo", sans-serif;
+    background-color: #1f1d1f;
+  }
+
+  h1 {
+    font-size: 65px;
+    text-transform: uppercase;
+    font-family: "Archivo Black", "Archivo", sans-serif;
+    font-weight: normal;
+    display: block;
+    height: auto;
+    text-align: center;
+  }
+
+  .glow-blue {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: "Archivo Black", "Archivo", sans-serif;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0f00e6, 0 0 40px #4900e6, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #4d62ff, 0 0 40px #624dff, 0 0 50px #714dff, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+
+  .logo-1 {
+    color: white;
+    animation: neon 3s infinite;
+  }
+  
+  @keyframes neon {
+    0% {
+      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+    }
+    50% {
+      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+      0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+      0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+    }
+    100% {
+      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+    }
+  }
+
+  /* Game selection section */
+
+  .game-selection {
+    display: flex;
+    gap: 1em;
+    color: white;
+
+    font-family: "Play", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  /* High score list */
+
+  .border {
+    width: 40vw;
+    border: #6c93e7 solid 2px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+.main-content__table {
+    color: white;
+    display: flex;
+    padding: 1em;
+    
+    flex-direction: column;
+    justify-content: center;
+
+    font-family: "Tiny5", sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    font-style: normal;
+}
+
+tr {
+    padding: 1em;
+}
+
+table tr:first-child td {
+    font-weight: 800;
+}
+
+td {
+    text-align: center;
+}
+
+  /* Add High score */

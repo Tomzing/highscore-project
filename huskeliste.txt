@@ -1,0 +1,53 @@
+Klargjøre VSC
+Dotnet 8.0.301
+https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+
+Node.js 20.14.0
+https://nodejs.org/en
+
+GIT 2.45.2
+https://www.git-scm.com/download/win
+
+IDE Visual Studio Code
+Extensions:
+C#
+C# Extensions
+NuGet Gallery Extension
+SQLite
+Material Icon Theme
+
+
+Backend
+dotnet new webapi -n HighscoreAPI
+cd HighscoreAPI
+
+//dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+//dotnet add package Microsoft.EntityFrameworkCore.Design
+
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+
+dotnet tool install --global dotnet-ef
+
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+dotnet ef migrations add AddGameAndScoreModels
+dotnet ef database update
+
+
+
+
+Frontend
+
+Installere Vite med en template for React-ts
+npm create vite@latest highscore-app --template react-ts
+
+Gå til app
+cd highscore-app
+
+Last ned vite
+
+Installer react-hook-form
+npm install react-hook-form
